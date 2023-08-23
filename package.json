@@ -28,10 +28,10 @@
     "license": "MIT",
     "scripts": {
         "build": "yarn run build-cjs && yarn run build-esm",
-        "build-cjs": "npx rimraf ./dist/cjs && npx tsc --outDir dist/cjs",
-        "build-esm": "npx rimraf ./dist/esm && npx tsc --outDir dist/esm --module es2015",
+        "build-cjs": "npx rimraf ./dist/cjs && tsc --outDir dist/cjs",
+        "build-esm": "npx rimraf ./dist/esm && tsc --outDir dist/esm --module es2015",
         "install": "yarn build",
-        "watch": "npx tsc --outDir dist/esm --module es2015 --watch"
+        "watch": "tsc --outDir dist/esm --module es2015 --watch"
     },
     "dependencies": {
         "@apollo/client": "^3.3.19",
@@ -45,10 +45,10 @@
         "ra-core": "^4.0.0"
     },
     "devDependencies": {
-        "cross-env": "^5.2.0",
+        "cross-env": ">=5.2.0",
         "graphql": "^15.6.0",
-        "rimraf": "^3.0.2",
-        "typescript": "^4.4.0",
+        "rimraf": ">=3.0.2",
+        "typescript": ">=4.4.0",
         "ra-core": "^4.0.0"
     },
     "gitHead": "8748248e40742bbd367338e0573a00213e17d3ab"
